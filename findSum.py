@@ -10,3 +10,4 @@ def findSum(firstNumber, secondNumber):
 
 print(findSum(10, 20))
 print(findSum(1, 2))
+print(findSum(61, 25))

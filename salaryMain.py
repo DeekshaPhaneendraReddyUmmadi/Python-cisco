@@ -1,46 +1,44 @@
 from salary_manager_v2_crud import createSalary, readSalary, readBySalary, salaries, updateBySalary, deleteBySalary
 
+def menu():
+    message = '''
+1 - Create Salary
+2 - Read All Salaryies
+3 - Read by Salary
+4 - Update
+5 - Delete
+6 - Exit/ Logout
+            '''
+    choice = int(input(message))
+    if choice == 1:
+        salary = int(input('Salary : '))
+        createSalary(salary)
+    elif choice == 2:
+        result_sal = readSalary()       
+        print('Salaries')
+        for i in result_sal:
+            print(i)
+    elif choice == 3:
+        salary = int(input('Salary : '))
+        index = readBySalary(salary)
+        if salary == -1:
+            print("Salary not found")
+        else:
+            print(f'Salary found at index {index}')
+    elif choice == 4:
+        oldSalary = int(input('Old salary : '))
+        newSalary = int(input('New salary : '))
+        updateBySalary(oldSalary, newSalary)
+    elif choice == 5:
+        salary = int(input('salary need to be deleted : '))
+        deleteBySalary(salary)
+    return choice
 
-# initializing the seed data with the help of createSalary function 
-for i in range(1,10):
-    createSalary(i * 1000)
-    
-# print all data in salaries list
-resultSalaries = readSalary()
-for i in resultSalaries:
-    print(i)
+def menus():
+    print('Salary Management App')
+    choice = menu()
+    while choice != 6:
+        choice = menu()
+    print('Thank you for using --Salary Management App--')
 
-# checking the salaries index by using linear search
-print("Salary found at index : ", 10000, " : " , readBySalary(10000))
-print("Salary found at index : ", 1000, " : " , readBySalary(1000))
-print("Salary found at index : ", 3000, " : " , readBySalary(3000))
-
-# printing the salary by findint the index and print the salary on the index
-print(salaries[readBySalary(3000)])
-
-# checking the update function
-updateBySalary(3000, 12990)
-print(readSalary())
-
-# checking the delete function
-deleteBySalary(12990)
-print(readSalary())
-
-'''
-output: 
-        1000
-        2000
-        3000
-        4000
-        5000
-        6000
-        7000
-        8000
-        9000
-        Salary found at index :  10000  :  -1
-        Salary found at index :  1000  :  0
-        Salary found at index :  3000  :  2
-        3000
-        [1000, 2000, 12990, 4000, 5000, 6000, 7000, 8000, 9000]
-        [1000, 2000, 4000, 5000, 6000, 7000, 8000, 9000]
-'''
+menus()

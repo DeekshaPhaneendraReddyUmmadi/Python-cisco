@@ -5,35 +5,45 @@
 
 ## **02-09-2025**
 #### sum of salaries, min(), max(), min function with hard code
-#### ecom 
-####   | -> Product.py (id, name, description, category, tags, stock, price) Class file
-####   | -> product_mainV2.py  
-####   | -> product_manager.py  
+```
+    ecom 
+      | -> Product.py (id, name, description, category, tags, stock, price) Class file
+      | -> product_mainV2.py  
+      | -> product_manager.py  
+```
 
 
 ## **03-09-2025**
-#### project
-####    |-> __init__.py    __all__=['module_a', 'module_b', 'utils', 'data']
-####    |-> module_a.py    fun_a() -> str
-####    |-> module_b.py    fun_b() -> str
-####    |-> util
-####    |     |-> __init__.py   __all__=['helper']
-####    |     |-> helper.py     helper_func() -> str
-####    |-> data
-####    |     |-> __init__.py  __all__=['loader', 'parser']
-####    |     |-> loader.py    loader_data() -> str
-####    |     |-> parser.py    parse_data(data) -> str
+#### packages, modules, unit testing, logging
+```
+project
+    |-> __init__.py    __all__=['module_a', 'module_b', 'utils', 'data']
+    |-> module_a.py    fun_a() -> str
+    |-> module_b.py    fun_b() -> str
+    |-> util
+    |     |-> __init__.py   __all__=['helper']
+    |     |-> helper.py     helper_func() -> str
+    |-> data
+    |     |-> __init__.py  __all__=['loader', 'parser']
+    |     |-> loader.py    loader_data() -> str
+    |     |-> parser.py    parse_data(data) -> str
+```
+```
+analatics
+    |-> __init__.py    __all__=['module_a', 'module_b', 'utils', 'data']
+    |-> module_a.py    fun_a() -> str
+    |-> module_b.py    fun_b() -> str
+    |-> util
+    |     |-> __init__.py   __all__=['helper']
+    |     |-> helper.py     helper_func() -> str
+    |-> data
+    |     |-> __init__.py  __all__=['loader', 'parser']
+    |     |-> loader.py    loader_data() -> str
+    |     |-> parser.py    parse_data(data) -> str
+```
 
+```
+unit test
 
-#### analatics
-####    |-> __init__.py    __all__=['module_a', 'module_b', 'utils', 'data']
-####    |-> module_a.py    fun_a() -> str
-####    |-> module_b.py    fun_b() -> str
-####    |-> util
-####    |     |-> __init__.py   __all__=['helper']
-####    |     |-> helper.py     helper_func() -> str
-####    |-> data
-####    |     |-> __init__.py  __all__=['loader', 'parser']
-####    |     |-> loader.py    loader_data() -> str
-####    |     |-> parser.py    parse_data(data) -> str
-####  
+project_emp 
+```

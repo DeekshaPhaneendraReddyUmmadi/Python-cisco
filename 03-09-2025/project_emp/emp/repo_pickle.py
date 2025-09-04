@@ -6,16 +6,21 @@ logging.basicConfig(filename='app.log',
         format='%(asctime)s %(levelname)s: %(message)s',
         level=logging.INFO)
 
-employees = []
-
-def read_all():
-    if not os.path.exists('employee.dat'):
-        return
-    with open('employee.dat', 'rb') as reader:
-        employees = pickle.load(reader)
-    if employees == None:
-        return []
+file_name = 'employee.dat'
+def load_from_file():
+    if os.path.exists(file_name):
+        with open(file_name, 'rb') as reader:
+            employees = pickle.load(reader)
+    else:
+        employees = []
+    
     return employees
+
+def save_to_file(employees):
+    with open(file_name, 'wb') as writer:
+        pickle.dump(employees, writer)
+
+employees = load_from_file() #[]
 
 def create_employee(id, name, job_title, salary, join_date):    
     emp = {
@@ -25,12 +30,15 @@ def create_employee(id, name, job_title, salary, join_date):
         'salary': salary, 
         'join_date': join_date
     }
-    employees = read_all()
-    # employees.append(emp)
-    with open('employee.dat', 'wb') as writer:
-        pickle.dump(employees, writer)
+    # employees = read_all()
+    employees.append(emp)
+    save_to_file(employees)
+    # with open('employee.dat', 'wb') as writer:
+    #     pickle.dump(employees, writer)
     logging.info(f'{name} Employee Created.')
     
+def read_all():
+    return employees
 
 
 

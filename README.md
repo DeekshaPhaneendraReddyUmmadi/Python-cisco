@@ -14,7 +14,7 @@
 
 
 ## **03-09-2025**
-#### packages, modules, unit testing, logging
+#### packages, modules, unit testing, logging, debugging, pickle(binary storage), exception handling
 ```
 project
     |-> __init__.py    __all__=['module_a', 'module_b', 'utils', 'data']
@@ -43,7 +43,22 @@ analatics
 ```
 
 ```
-unit test
 
 project_emp 
+```
+
+## **04-09-2025**
+####   API's https://jsonplaceholder.typicode.com/posts , apis(pip install requests), to check it is installed or not USE: pip show requests
+
+```
+emp_app
+    |-> client
+    |    
+    |-> server
+    |     |-> app.py     
+    |     |-> repo.py
+    |-> mini-server
+    |     |-> app.py
+    |     |-> repo.py
+    |     |-> test_repo.py
 ```

@@ -62,3 +62,7 @@ emp_app
     |     |-> repo.py
     |     |-> test_repo.py
 ```
+
+
+## **05-09-2025**
+#### linux commands with python, telnet (telnetlib. read_all(), write(), read_all().decode), ftp, ssh
